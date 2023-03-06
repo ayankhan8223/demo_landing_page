@@ -2,11 +2,17 @@
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+  font-family: GraublauWeb;
+  src: url("neutral_face/NeutralFace.otf") format("opentype");
+}
+
 body {
   background-color: black;
   color: white;
   overflow: hidden;
-  font-family: "Neutral Face";
+  font-family: GraublauWeb;
 }
 header {
   display: flex;
@@ -46,19 +52,19 @@ header .lang {
   left: 50%;
   transform: translateX(-50%);
 }
-.wrapper img {
+.wrapper video {
   height: 100vh;
 }
 
 .container {
   position: absolute;
-  bottom: 0;
+  top: 50%;
+  left: 0;
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
   width: 100%;
   padding-bottom: 30px;
-  height: fit-content;
 }
 .left-container {
   margin-left: 25px;
@@ -69,6 +75,16 @@ header .lang {
   line-height: 95%;
   font-size: 50px;
   font-weight: lighter;
+}
+
+.tagLine::before {
+  content: "";
+  position: absolute;
+  background-color: #336cb5;
+  width: 300px;
+  height: 10px;
+  bottom: -10px;
+  transform: skew(-45deg) rotate(-2deg);
 }
 .left-container-2 {
   display: flex;
